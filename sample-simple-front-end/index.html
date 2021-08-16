@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Messagely</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form-group" id="need-auth" style="display: none">
+      <h1>Messagely</h1>
+      <form id="register-form">  
+          <h2>Register</h2>
+          <input class="form-control" id="register-username" placeholder="username"><br>
+          <input class="form-control" id="register-password" placeholder="password" type="password"><br>
+          <input class="form-control" id="register-fname" placeholder="first name"><br>
+          <input class="form-control" id="register-lname" placeholder="last name"><br>
+          <input class="form-control" id="register-phone" placeholder="phone"><br>
+          <button class="btn btn-info">Sign Up</button>
+      </form>
+    </div>
+    <div class="form-group">  
+      <form id="login-form">
+          <h2>Login</h2>
+          <input class="form-control" id="login-username" placeholder="username">
+          <input class="form-control" id="login-password" placeholder="password" type="password">
+          <button class="btn btn-info">Log In</button>
+        </form>       
+
+    </div>
+
+  <div id="has-auth" style="display: none">
+      <h1 id="username"></h1>
+    
+      <h2>Messages From You</h2>
+      <ul id="msgs-from"></ul>
+    
+      <h2>Messages To You</h2>
+      <ul id="msgs-to"></ul>
+    
+      <h2>New Message</h2>
+    
+      <form id="new-message-form">
+        To: <select id="newmsg-to"></select><br>
+        <textarea id="newmsg-body" placeholder="message here"></textarea><br>
+        <button>Send</button>
+      </form>
+    
+      <p><button id="logout">Logout</button></p>
+    
+    </div>
+    
+  </div>
+    
+      <script src="https://unpkg.com/jquery"></script>
+      <script src="messagely.js"></script>
+    
+</body>
+</html>
