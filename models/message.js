@@ -77,22 +77,22 @@ class Message {
     }
 
     return {
-      id: m.id,
+      id: msg.id,
       from_user: {
-        username: m.from_username,
-        first_name: m.from_first_name,
-        last_name: m.from_last_name,
-        phone: m.from_phone,
+        username: msg.from_username,
+        first_name: msg.from_first_name,
+        last_name: msg.from_last_name,
+        phone: msg.from_phone,
       },
       to_user: {
-        username: m.to_username,
-        first_name: m.to_first_name,
-        last_name: m.to_last_name,
-        phone: m.to_phone,
+        username: msg.to_username,
+        first_name: msg.to_first_name,
+        last_name: msg.to_last_name,
+        phone: msg.to_phone,
       },
-      body: m.body,
-      sent_at: m.sent_at,
-      read_at: m.read_at,
+      body: msg.body,
+      sent_at: msg.sent_at,
+      read_at: msg.read_at,
     };
   }
 }

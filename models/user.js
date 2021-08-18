@@ -80,7 +80,7 @@ class User {
     if(!result.rows[0]) {
       throw new ExpressError(`No such user: ${username}`, 404);
     }   
-    return result.rowa[0];
+    return result.rows[0];
   }
 
   /** Return messages from this user.
@@ -93,7 +93,7 @@ class User {
 
   static async messagesFrom(username) {
     const result = await db.query(
-      `SELECT m.id, m.username,
+      `SELECT m.id, m.to_username,
       u.first_name, u.last_name,
       u.phone, m.body,
       m.sent_at, m.read_at

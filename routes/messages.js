@@ -18,7 +18,7 @@ const ExpressError = require("../expressError");
  **/
 router.get("/:id", ensureLoggedIn, async function (req, res, next) {
     try {
-        let username = req.username.username;
+        let username = req.user.username;
         let msg = await Message.get(req.params.id);
 
         if(msg.to_user.username !== username && msg.from_user.username !== username) {
@@ -44,7 +44,7 @@ router.post("/", ensureLoggedIn, async function (req, res, next) {
             to_username: req.body.to_username,
             body: req.body.body
         });
-        return res.json({message: msq});
+        return res.json({message: msg});
     } catch(err) {
         return next(err);
     }

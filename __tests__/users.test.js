@@ -26,7 +26,7 @@ describe("Test User class", function () {
     });
 
     expect(u.username).toBe("joel");
-    expect(u.password).not.toBe(undefined);
+    expect(u.password).not.toBe(null);
   });
 
   test("can authenticate", async function () {
@@ -120,7 +120,7 @@ describe("Test messages part of User class", function () {
   });
 
   test('can get messages to user', async function () {
-    let m = await User.messagesTo("test1");
+    let m = await User.messagesTo("test1");    
     expect(m).toEqual([{
       id: expect.any(Number),
       body: "u2-to-u1",
